@@ -1,30 +1,24 @@
-.main {
-  display: flex;
-  flex-wrap: wrap;
-  height: 100%;
-  font-family: $font-main;
+body {
+  font-family: $font-face;
   color: $font-color;
   background-color: $color-main;
 }
-.main__header {
+.header {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 320px;
-  padding-top: 15px;
-  margin-bottom: 10px;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 15px 25px 15px 25px;
+}
 
-  .logo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: center;
-    margin-right: 25px;
+  .logo {
+    display: block;
+    width: 110px;
 
-    &__text {
+    &__slogan {
       font-size: 12px;
       letter-spacing: 0.06em;
       text-transform: uppercase;
+      padding-left: 15px;
     }
   }
 
@@ -49,7 +43,7 @@
     }
     span::before,
     span::after {
-    content: '';
+      content: '';
       display: block;
     }
     span::before {
@@ -73,233 +67,252 @@
       background-color: white;
     }
   }
-}
 
-.section-first {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 50px;
-
-  &__img {
-    background-image: url("/img/1iphone.jpg");
-    background-repeat: no-repeat;
-    width: 320px;
-    height: 466px;
-  }
-}
-
-.first-block__inform {
-  text-align: center;
-  font-size: 30px;
-  letter-spacing: 0.09em;
-  padding-top: 85px;
-  text-transform: uppercase;
-  padding-bottom: 20px;
-}
-.works-button {
-  display: block;
-  position: relative;
-  left: 70px;
-  width: 180px;
-  height: 50px;
-  padding: 0;
-  border: 1px solid rgb(255, 255, 255);
-  background-color: rgba(0, 0, 0, 0.4);
-  margin-bottom: 45px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-
-  &__text {
-    letter-spacing: 0.15em;
-    color: white;
-    transition: color 0.3s;
-  }
-  &:hover {
-    border: 1px solid rgb(255, 255, 255);
-    background: white;
-    box-shadow: 0 0 7px white;
-  }
-  &:hover &__text {
-    color: $color-main;
-  }
-}
-.container-icon {
-  height: auto;
-  margin-bottom: 30px;
-}
-.social {
+.index-first {
   display: flex;
-  justify-content: space-around;
-  color: white;
-  list-style: none;
-  padding: 0 15px 0;
-
-  &__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 25px;
-    color: white;
-    background-color: $color-main;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  &__item:hover {
-    font-size: 25px;
-    color: $color-main;
-    background-color: white;
-    box-shadow: 0 0 7px white;
-  }
-}
-
-.arrow {
-  display: flex;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-
-  &__item {
-    filter: invert(60%);
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  &__item:hover {
-    filter: invert(100%);
-    transform: translateY(7px);
-  }
-}
-
-
-.section-second {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-.block-inform {
-  width: 100%;
+  background-image: url("/img/1iphone.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  height: 466px;
+  margin: 0 0 70px 0;
   
-  .block-inform__tetxt {
-    font-size: 16px;
-    letter-spacing: 0.06em;
-    padding-left: 12px;
+  &__title {
+    width: 250px;
+    text-align: center;
+    font-family: PlayfairDisplay;
+    font-size: 30px;
+    font-weight: 100;
+    letter-spacing: 0.09em;
+    line-height: 140%;
+    padding-top: 85px;
+    margin: 0 0 30px 0;
     text-transform: uppercase;
   }
 }
-.section-second__img {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  width: 100%;
+  .index-first__button {
+    display:block;
+    width: 180px;
+    height: 50px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: white;
+    text-transform: uppercase;
+    margin: 0 0 50px 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    
+    &:hover {
+      border: 1px solid rgb(255, 255, 255);
+      background: white;
+      box-shadow: 0 0 5px white;
+      color: $color-main;
+    }
+  } 
+  .social {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px 0;
 
-  .catalog__number {
-    position: absolute;
-    top: 10px;
-    left: 110px;
-    font-size: 30px;
+    .social__item  {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 30px 0 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 25px;
+      text-decoration: none;
+      color: white;
+      background-color: $color-main;
+      cursor: pointer;
+      transition: all 0.3s;
+    
+      &:nth-last-child(1) {
+        margin-right: 0;
+      }
+
+      &:hover {
+        color: $color-main;
+        background-color: white;
+        box-shadow: 0 0 7px white;
+      }
+    }
   }
-  & .catalog__line {
+
+  .index-first__arrow {
+    background-image: url("/img/arrow.png");
+    background-repeat: no-repeat;
+    filter: invert(100);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  
+    &:hover {
+      transform: translateY(7px);
+    }
+  }
+
+
+.index-catalog {
+  display: block;
+  position: relative;
+  margin-bottom: 50px;
+
+  &__title {
+    display: block;
+    position: relative;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding-left: 20px;
+  }
+
+  &__img {
+  display: block;
+  position: relative;
+  width: 90%;
+  max-width: 288px;
+  height: 100%;
+  max-height: 392px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  }
+  &__number {
+    display: block;
+    position: absolute; 
+    left: 115px; 
+    top: 20px;
+    font-size: 24px;
+  }
+  &__number::before {
+    content: '';
+    display: block;
     position: absolute;
-    top: 50px;
-    left: 40px;
-    border: 0;
     width: 60px;
-    height: 2px;
-    margin-right: 10px;
+    height: 1px;
+    top: 15px;
+    right: 40px;
+    border: 0;
     background-color: #ffffff;
   }
-  & .catalog__item {
+  &__item {
+    width: 80%;
+    max-width: 288px;
     position: absolute;
-    margin-top: 330px;
+    top: 330px;
+    left: 15px;
+    padding-left: 20px;
     font-size: 16px;
     font-weight: 200;
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
 }
-progress {
-  border: 0;
-  width: 60px;
-  height: 4px;
-  margin-right: 10px;
-  background-color: #ffffff;
 
-  &:nth-last-child(1) {
-    margin-right: 0px;
-  }
-  &::-webkit-progress-value {
-    background: rgb(255, 255, 255);
-  }
-}
-.section-third-img {
-  background-image: url("/img/3iphone.jpg");
-  background-repeat: no-repeat;
-  width: 288px;
-  height: 170px;
-  margin-bottom: 20px;
-}
-.section-third {
+.index-catalog__indicator {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+}
 
+  progress {
+    border: 0;
+    width: 60px;
+    height: 3px;
+    margin-right: 10px;
+    background-color: #ffffff;
+    
+    &:nth-last-child(1) {
+      margin-right: 0px;
+    }
+    &::-webkit-progress-value {
+      background: rgb(255, 255, 255);
+    }
+  }
+
+
+.index-promo {
+  display: block;
+  
+  .index-promo__img {
+    text-align: center;
+    max-width: 90%;
+    height: auto;
+    max-height: 323px;
+    overflow: hidden;
+    margin: 0 auto;
+    
+  }
+  
   &__notice {
-    width: 100%;
-    padding-left: 20px;
-    margin: 0;
+    display: block;
+    position: relative;
+    max-width: 90%;
+    text-align: start;
+    width: 150px;
+    padding-left: 10%;
+    margin: 0 150px 20px 0;
     font-size: 18px;
     font-weight: 200;
     line-height: 170%;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    
   }
-   .section-third__line {
-    width: 120px;
+
+  &__notice::after {
+    content: "";
+    position: absolute;
+    top: 70px;
+    right: 10%;
+    width: 130px;
     height: 1px;
     background-color: #ffffff;
-    margin-right: 165px;
   }
   &__offer {
+    width: 80%;
+    max-width: 288px;
+    padding-left: 10%;
     font-size: 14px;
     line-height: 170%;
-    margin: 0 30px 30px 0;
+    margin-bottom: 30px;
   }
-  & .works-button {
+
+  .index-promo__button {
     display: block;
-    position: relative;
-    left: -50px;
     width: 180px;
     height: 50px;
-    padding: 0;
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    background-color: rgba(0, 0, 0, 0.4);
-    margin-bottom: 45px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  & .works-button span {
-    font-size: 11px;
-    line-height: 12px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+    border: 1px solid rgb(0, 0, 0,);
+    background-color: rgb(0, 0, 0);
+    font-size: 10px;
+    letter-spacing: 0.25em;
     color: white;
-    transition: color 0.3s;
-  }
-  & .works-button:hover {
-    border: 1px solid rgb(255, 255, 255);
-    background: white;
-    box-shadow: 0 0 7px white;
-  }
-  & .works-button:hover span {
-    color: $color-main;
-  }
-}
-  
-.footer-container {
+    text-transform: uppercase;
+    padding-left: 0;
+    margin: 0 110px 20px 10%;
+    cursor: pointer;
+    transition: all 0.3s;
+    
+    &:hover {
+      border: 1px solid rgb(255, 255, 255);
+      background: white;
+      box-shadow: 0 0 5px white;
+      color: $color-main;
+    }
+  } 
+} 
+
+
+.footer {
   left: 0; 
   bottom: 0;
   width: 100%;
@@ -307,33 +320,26 @@ progress {
   &__line {
     display: block;
     position: relative;
-    align-self: center;
-    width: 100%;
-    height: 5px;
-    border: none;
-    background-color: $color-main;
-  
-    & span {
-      position: absolute;
-      top: 50%;
-      left: 5%;
-      width: 90%;
-      height: 1px;
-      background-color:rgb(146, 146, 146);
-    }
+    margin: 0 auto; 
+    
+    width: 90%;
+    height: 1px;
+    background-color: rgb(114, 114, 114);
   }
-  &__text {
-    padding: 0; 
+  &__nav {
+    padding: 0;
+    text-align:  center;
   }
-  li {
+  .nav__item {
     position: relative;
     font-size: 16px;
     font-weight: lighter;
     color: rgb(146, 146, 146);
     line-height: 25px;
     list-style-type: none;
+    text-decoration: none;
     text-align:  center;
-    transition: color 0.3s;
+    transition: all 0.3s;
   
     &:hover {
       color: rgb(255, 255, 255);
@@ -346,7 +352,7 @@ progress {
   }
   .social {
     height: 35px;
-    margin: 0;
+    margin: 20px;
 
     &__item {
       font-size: 25px;
